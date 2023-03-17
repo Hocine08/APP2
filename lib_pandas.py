@@ -15,6 +15,7 @@ print(df['X2']*df['X2'])
 
 
 
+
 "for x in df: print(x) # imprime le nom de la colonne"
 
 "df = pandas.read_csv('file1.csv', sep = ';', names = ['X1'; 'X2'])"
