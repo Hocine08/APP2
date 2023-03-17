@@ -1,5 +1,6 @@
 import cx_Oracle
-import pandas as pd
+import pandas
+
 #connection =cx_Oracle.connect("hr/@localhost:1521/orcl2.lan")#
 
 
@@ -11,7 +12,7 @@ dsn = cx_Oracle.makedsn(
 
 conn=cx_Oracle.connect(
     user='hr',
-    password='',
+    password='Kamel123!',
     dsn= dsn
 )
 
@@ -19,9 +20,14 @@ c = conn.cursor()
 
 c.execute('select * from employees where rownum <10')
 
-"for  row in c: print(row)"
+for  row in c: print(row)
 
-df = pd.DataFrame(c)
-df.index
-df.columns
+print("votre requete vient d'etre exicutée "
+      ""
+      ""
+      "\n")
+df = pandas.read_csv('file1.csv', sep = ',', names = ['X1', 'X2'], header = None)
+print(df['X2']*df['X2'])
+
+
 
