@@ -1,6 +1,7 @@
 import cx_Oracle
 import pandas
 
+
 #connection =cx_Oracle.connect("hr/@localhost:1521/orcl2.lan")#
 
 
