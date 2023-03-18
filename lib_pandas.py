@@ -7,7 +7,7 @@ import numpy
 "s3 = pandas.Series([1, 2, 5, 7], dtype = numpy.int8)"
 "print(s4['b']+s4['c'])"
 "df = pd.read_csv('file1.csv', sep = ';' )"
-df = pandas.read_csv('file1.csv', sep = ',', names = ['X1', 'X2'], header = None)
+df = pandas.read_csv('file1.csv', sep = ',', names = ['X1', 'X2'], header = None )
 print(df['X2']*df['X2'])
 "df.head(3)"
 "df.columns"
