@@ -49,7 +49,34 @@ output = var_csv.to_json(json_file, indent = 1, orient ='records')
 
 
 
-df = pd.read_csv('Fichier202303202.csv', sep =';',index_col = 3)
+df = pd.read_csv('Fichier202303202.csv', sep =';',index_col = None)
 print(df)
 maxs=df.max()
 print("max" , + maxs)
+
+print(df.head(2))
+print(df.tail(2))
+print(df.columns)
+print(df.columns.values)
+print(df.index )
+print(df.index.values)
+
+print(df.values)
+print(df.describe())
+print(df.describe(include = 'all') )
+
+print("le nombre de lignes , colnonnes est: " ,df.shape)
+
+df.index.name = 'myRow'; df.columns.name = 'myCol'
+print(df.stack().reset_index())
+
+#for x in df: print(x) # imprime le nom de la colonne
+
+
+
+
+ #   for x in df.itertuples(): print(x.A) # Imprime la valeur courante de la colonne A de df
+var = df['ID_EMP']
+
+print("la idenfiants existants sont : '\n'", df['ID_EMP'])
+print(df['ID_EMP'].max())
