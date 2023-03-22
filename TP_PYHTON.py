@@ -49,6 +49,7 @@ output = var_csv.to_json(json_file, indent = 1, orient ='records')
 
 
 
+
 df = pd.read_csv('Fichier202303202.csv', sep =';',index_col = None)
 print(df)
 maxs=df.max()
