@@ -8,6 +8,8 @@ dsn = cx_Oracle.makedsn(
     service_name='orcl2.lan'
 )
 
+
+
 conn=cx_Oracle.connect(
     user='hr',
     password='Kamel123!',
