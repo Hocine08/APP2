@@ -4,5 +4,5 @@
   tasks:
      - name: "[kamelGenie]  -copie des fichier"
        copy:
-          src: ./vcs.xml
-          dest: /vscjenk.xml
+          src: ./*
+          dest: /
