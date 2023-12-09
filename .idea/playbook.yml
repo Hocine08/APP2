@@ -1,8 +1,8 @@
-
-- name: install python
+- name: "[kamelGenie]"
   hosts: all
   become: yes
-  roles:
-    - python
-
-
+  tasks:
+     - name: "[kamelGenie]  -copie des fichier"
+       copy:
+          src: ./vcs.xml
+          dest: /vscjenk.xml
