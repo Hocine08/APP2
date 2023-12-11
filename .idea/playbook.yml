@@ -15,16 +15,16 @@
           mode: '0775'
           
           
-  tasks:
-     - name: "creation d archive de deploiment"
-       copy:
-          src: ./jenk_roles.tar.gz
-          dest: /root/var/projects
-          
+#  tasks:
+#     - name: "creation d archive de deploiment"
+#       copy:
+#          src: ./jenk_roles.tar.gz
+#          dest: /root/var/projects
+#          
           
   tasks:
      - name: "creation automatiqument"
        unarchive:
           src: ./jenk_roles.tar.gz
-          dest: "{{ mon_dir1 }}"        
+          dest: /root/var/projects/app       
           
