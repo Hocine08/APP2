@@ -11,6 +11,7 @@
   tasks:
      - name: "suppression des rep de travail"
        shell: "rm -rf /root/var/projects/*" 
+       
   tasks:
      - name: "creation  de rep de traval"
        file:
