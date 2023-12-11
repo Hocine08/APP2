@@ -38,6 +38,6 @@
   tasks:
      - name: "creation automatiqument"
        unarchive:
-           src: ./jenk_roles.tar.gz
+           src: ./jenk_proj.tar.gz
            dest: /root/var/projects/app/       
            
