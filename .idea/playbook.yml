@@ -38,6 +38,6 @@
   tasks:
      - name: "creation automatiqument"
        unarchive:
-           src:  pwd/jenk_proj.tar.gz
+           src:  /var/jenkins_home/workspace/gg/jenk_proj.tar.gz
            dest: /root/var/projects/app/       
            
