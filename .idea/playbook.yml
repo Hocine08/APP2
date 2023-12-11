@@ -16,12 +16,12 @@
 #     - name: "  des rep de travail"
 #       shell: "rm -rf /root/tp/*" 
 #       
-#  tasks:
-#     - name: "creation  de rep de traval"
-#       file:
-#          path: "/root/var/projects/app"
-#          state: directory
-#          mode: '0777'       
+  tasks:
+     - name: "creation  de rep de traval"
+       file:
+          path: "/root/var/projects/app"
+          state: directory
+          mode: '0777'       
 #           
 #          
 #  tasks:
@@ -31,9 +31,9 @@
 #          dest: /root/var/projects/app
           
           
-#  tasks:
-#     - name: "creation automatiqument"
-#       unarchive:
-#           src: ./jenk_roles.tar.gz
-#           dest: /root/tp/projects/app       
-#           
+  tasks:
+     - name: "creation automatiqument"
+       unarchive:
+           src: ./jenk_roles.tar.gz
+           dest: /root/tp/projects/app/       
+           
