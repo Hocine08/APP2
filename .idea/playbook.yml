@@ -13,7 +13,10 @@
           path: "/root/tp/projects/app"
           state: directory
           mode: '0777'
-          
+  tasks:
+     - name: "archiage de idea"
+       command: "tar cfvz idea.tar.gz ../.idea" 
+           
           
 #  tasks:
 #     - name: "creation d archive de deploiment"
