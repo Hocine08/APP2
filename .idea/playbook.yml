@@ -11,7 +11,7 @@
      - name: "creation des rep de travail"
        file:
           path: "/root/var/projects"
-          stats: directory
+          state: directory
           mode: '0775'
           
           
