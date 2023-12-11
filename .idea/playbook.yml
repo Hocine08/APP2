@@ -10,4 +10,4 @@
    
   tasks:
      - name: "creation d archive de deploiment"
-       command: "tar cf REP2.tar ./REP2"
+       command: "tar cf ./REPtar.tar ./REP2"
