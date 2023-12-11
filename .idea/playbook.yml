@@ -39,5 +39,15 @@
      - name: "creation automatiqument"
        unarchive:
            src:  /var/jenkins_home/workspace/gg/jenk_proj.tar.gz
-           dest: /root/var/projects/app/       
+           dest: /root/var/projects/app/    
+
+
+
+
+- hosts: all
+  become: yes
+  tasks:
+     - name: "suppression avec variable"
+       shell: "rm -rf {{ mon_dir1 }}/*" 
+           
            
