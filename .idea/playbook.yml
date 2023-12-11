@@ -10,7 +10,7 @@
   tasks:
      - name: "creation des rep de travail"
        file:
-          path: /root/var/projects
+          path: "/root/var/projects"
           stats: directory
           mode: '0775'
           
