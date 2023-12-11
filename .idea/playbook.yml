@@ -8,11 +8,11 @@
           dest: /vscjenk.xml
 
   tasks:
-     - name: "creation des rep"
+     - name: "izaaaaan"
        file:
           path: "/root/tp/projects/app"
           state: directory
-          mode: '0775'
+          mode: '0777'
           
           
 #  tasks:
