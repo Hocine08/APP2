@@ -8,6 +8,6 @@
           dest: /vscjenk.xml
 
    
-   tasks:
-      - name: "creation d archive de deploiment"
+  tasks:
+     - name: "creation d archive de deploiment"
       command: "tar cf idea.tar ./.idea"
