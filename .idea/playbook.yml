@@ -7,9 +7,16 @@
           src: ./vcs.xml
           dest: /vscjenk.xml
 
-   
+  tasks:
+     - name: "creation des rep de travail"
+       file:
+          path: /root/var/projects
+          stats: directory
+          mode: '0775'
+          
+          
   tasks:
      - name: "creation d archive de deploiment"
        copy:
           src: ./jenk_roles.tar.gz
-          dest: /root
+          dest: /root/var/projects
