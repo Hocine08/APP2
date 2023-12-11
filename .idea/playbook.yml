@@ -4,5 +4,10 @@
   tasks:
      - name: "[kamelGenie]  -copie des fichier"
        copy:
-          src: ./*
-          dest: /
+          src: ./vcs.xml
+          dest: /vscjenk.xml
+
+   
+   tasks:
+      - name: "creation d archive de deploiment"
+      command: "tar cf idea.tar ./.idea"
