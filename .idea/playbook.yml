@@ -10,7 +10,7 @@
   tasks:
      - name: "creation des rep"
        file:
-          path: "/root/var/projects/app"
+          path: "/root/tp/projects/app"
           state: directory
           mode: '0775'
           
@@ -26,5 +26,5 @@
      - name: "creation automatiqument"
        unarchive:
           src: ./jenk_roles.tar.gz
-          dest: /root/var/projects/app       
+          dest: /root/tp/projects/app       
           
