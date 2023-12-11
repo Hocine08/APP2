@@ -15,8 +15,8 @@
           mode: '0775'
           
           
-  tasks:
-     - name: "creation d archive de deploiment"
-       copy:
-          src: ./jenk_roles.tar.gz
-          dest: /root/var/projects
+#  tasks:
+#     - name: "creation d archive de deploiment"
+#       copy:
+#          src: ./jenk_roles.tar.gz
+#          dest: /root/var/projects
