@@ -15,7 +15,7 @@
   tasks:
      - name: "creation  de rep de traval"
        file:
-          path: "/root/tp/projects/app"
+          path: "/root/var/projects/app"
           state: directory
           mode: '0777'       
            
