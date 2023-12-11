@@ -44,10 +44,6 @@
 
 
 
-- hosts: all
-  become: yes
-  tasks:
-     - name: "suppression avec variable"
-       shell: "rm -rf {{ mon_dir1 }}/*" 
+ 
            
            
