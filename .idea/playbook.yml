@@ -7,24 +7,24 @@
 #          src: ./vcs.xml
 #          dest: /vscjenk.xml
 
-#  tasks:
-#     - name: "izaaaaan"
-#       file:
-#          path: "/root/tp/projects/app"
-#          state: directory
-#          mode: '0777'
+
   tasks:
      - name: "suppression des rep de travail"
        shell: "rm -rf /root/var/projects/*" 
-        
+  tasks:
+     - name: "creation  de rep de traval"
+       file:
+          path: "/root/tp/projects/app"
+          state: directory
+          mode: '0777'       
            
           
-#  tasks:
-#     - name: "creation d archive de deploiment"
-#       copy:
-#          src: ./jenk_roles.tar.gz
-#          dest: /root/var/projects
-#          
+  tasks:
+     - name: "creation d archive de deploiment"
+       copy:
+          src: ./jenk_roles.tar.gz
+          dest: /root/var/projects/app
+          
           
 #  tasks:
 #     - name: "creation automatiqument"
