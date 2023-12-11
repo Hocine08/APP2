@@ -22,7 +22,7 @@
 #          dest: /root/var/projects
 #          
           
-   tasks:
+  tasks:
      - name: "creation automatiqument"
        unarchive:
           src: ./jenk_roles.tar.gz
