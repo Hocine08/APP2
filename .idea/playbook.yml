@@ -7,7 +7,8 @@
 #          src: ./vcs.xml
 #          dest: /vscjenk.xml
 
-
+- hosts: all
+  become: yes
   tasks:
      - name: "suppression des rep de travail"
        shell: "rm -rf /root/var/projects/*" 
@@ -15,9 +16,11 @@
 #  tasks:
 #     - name: "  des rep de travail"
 #       shell: "rm -rf /root/tp/*" 
-#       
+# 
+- hosts: all
+  become: yes      
   tasks:
-     - name: "creation  de rep de traval"
+     - name: "merde"
        file:
           path: "/root/var/projects/app"
           state: directory
@@ -30,7 +33,8 @@
 #          src: ./jenk_roles.tar.gz
 #          dest: /root/var/projects/app
           
-          
+- hosts: all
+  become: yes          
   tasks:
      - name: "creation automatiqument"
        unarchive:
