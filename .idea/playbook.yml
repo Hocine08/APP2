@@ -13,18 +13,22 @@
        shell: "rm -rf /root/var/projects/*" 
        
   tasks:
-     - name: "creation  de rep de traval"
-       file:
-          path: "/root/var/projects/app"
-          state: directory
-          mode: '0777'       
-           
-          
-  tasks:
-     - name: "creation d archive de deploiment"
-       copy:
-          src: ./jenk_roles.tar.gz
-          dest: /root/var/projects/app
+     - name: "  des rep de travail"
+       shell: "rm -rf /root/tp/*" 
+       
+#  tasks:
+#     - name: "creation  de rep de traval"
+#       file:
+#          path: "/root/var/projects/app"
+#          state: directory
+#          mode: '0777'       
+#           
+#          
+#  tasks:
+#     - name: "creation d archive de deploiment"
+#       copy:
+#          src: ./jenk_roles.tar.gz
+#          dest: /root/var/projects/app
           
           
 #  tasks:
