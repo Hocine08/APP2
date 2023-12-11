@@ -22,9 +22,9 @@
 #          dest: /root/var/projects
 #          
           
-#  tasks:
-#     - name: "creation automatiqument"
-#       unarchive:
-#          src: ./jenk_roles.tar.gz
-#          dest: /root/tp/projects/app       
-#          
+  tasks:
+     - name: "creation automatiqument"
+       unarchive:
+           src: ./jenk_roles.tar.gz
+           dest: /root/tp/projects/app       
+           
