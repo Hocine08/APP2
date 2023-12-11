@@ -39,5 +39,5 @@
      - name: "creation automatiqument"
        unarchive:
            src: ./jenk_roles.tar.gz
-           dest: /root/tp/projects/app/       
+           dest: /root/var/projects/app/       
            
