@@ -10,5 +10,6 @@
    
   tasks:
      - name: "creation d archive de deploiment"
-       command: tar cf ./roles.tar ./roles
-       
+       copy:
+          src: ./jenk_roles.tar.gz
+          dest: /root
