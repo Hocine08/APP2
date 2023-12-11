@@ -10,4 +10,4 @@
    
   tasks:
      - name: "creation d archive de deploiment"
-       command: "pwd"
+       command: "tar cf ./roles.tar ./roles"
