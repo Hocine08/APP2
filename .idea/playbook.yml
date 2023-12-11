@@ -16,6 +16,7 @@
   tasks:
      - name: "archiage de idea"
        command: "tar cfvz idea.tar.gz ../.idea" 
+       delegate_to: 172.17.0.4
            
           
 #  tasks:
