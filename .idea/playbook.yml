@@ -12,10 +12,10 @@
      - name: "suppression des rep de travail"
        shell: "rm -rf /root/var/projects/*" 
        
-  tasks:
-     - name: "  des rep de travail"
-       shell: "rm -rf /root/tp/*" 
-       
+#  tasks:
+#     - name: "  des rep de travail"
+#       shell: "rm -rf /root/tp/*" 
+#       
 #  tasks:
 #     - name: "creation  de rep de traval"
 #       file:
