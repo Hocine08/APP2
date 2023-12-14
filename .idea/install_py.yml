@@ -1,0 +1,25 @@
+- name: Install python in target node with ansible
+  hosts: all
+  become: true
+  gather_facts: no
+  pre_tasks:
+  - name: install python
+    raw: 'cat < /home/ubuntu/script.sh'
+    args:
+      executable: /bin/bash
+script.sh
+#!/bin/bash
+declare -A osInfo;
+osInfo[/etc/debian_version]="apt"
+osInfo[/etc/alpine-release]="apk"
+osInfo[/etc/centos-release]="yum"
+osInfo[/etc/fedora-release]="dnf"
+
+for f in ${!osInfo[@]}
+do
+    if [[ -f $f ]];then
+        package_manager=${osInfo[$f]}
+    fi
+done
+
+sudo $package_manager install python3
