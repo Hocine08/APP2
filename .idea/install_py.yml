@@ -1,7 +1,14 @@
-- name: Install python in target node with ansible
+- name: "[kamelGenie]"
   hosts: all
-  become: true
-  gather_facts: no
-  pre_tasks:
-  - name: install python
-    raw: 'yum install python3'
+  become: yes
+#  tasks:
+#     - name: "[kamelGenie]  -copie des fichier"
+#       copy:
+#          src: ./vcs.xml
+#          dest: /vscjenk.xml
+
+- hosts: all
+  become: yes
+  tasks:
+     - name: "suppression des rep de travail"
+       shell: "yum install python3" 
