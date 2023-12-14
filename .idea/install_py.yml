@@ -7,7 +7,6 @@
     raw: 'cat < /home/ubuntu/script.sh'
     args:
       executable: /bin/bash
-script.sh
 #!/bin/bash
 declare -A osInfo;
 osInfo[/etc/debian_version]="apt"
