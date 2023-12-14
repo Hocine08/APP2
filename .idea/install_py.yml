@@ -4,4 +4,4 @@
   gather_facts: no
   pre_tasks:
   - name: install python
-    raw: yum install python3
+    raw: 'yum install python3'
