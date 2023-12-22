@@ -154,7 +154,7 @@ ansible-playbook  -i hosts.yml --user=root playbook.yml
 pour pouvoir exicuter la commande netstat  -ab 
 il faut deja installer le package net-tools 
 qui contient ifconfig ...
-
+netstat -tulpn
 
 
 
@@ -176,3 +176,6 @@ les diffrentes etapes pour connexion aux machine de dev et de prod :
 
 
 3/ sur putty   connexion : root  ip: 127.0.0.5 et le port 6060
+
+
+docker run -it --name UB2 -p 4040:22 ubuntu
