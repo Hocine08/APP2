@@ -49,6 +49,18 @@ mdp jenkins
 
 
 
+ceation d un user sur le HOST DEV:
+user: dev1
+mdp: jenkins
+
+---comment creer ce user:
+creation de user #adduser dev1
+attribution de mdp au user #passwd dev1
+attribution de droit sudoer au user #usermdo -aG wheel dev1
+pour exicuter une commande qui neccisste le droits admin il  faut juste mettre la commande au debut de la commande pour pouvoir se mettre sur ces droits de root!!
+
+
+
 
 
 
