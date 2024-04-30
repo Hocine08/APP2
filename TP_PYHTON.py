@@ -2,6 +2,7 @@ import cx_Oracle
 import csv
 import pandas as pd
 
+lib_dir = r"C:\oracle\instantclient_21_10"
 dsn = cx_Oracle.makedsn(
     'localhost',
     '1521',
