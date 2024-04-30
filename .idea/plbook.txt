@@ -1,0 +1,10 @@
+cette syntaxe permet de recopier le fichier vsc.xml vers sa destination avec un renommage:
+
+- name: "[kamelGenie]"
+  hosts: all
+  become: yes
+  tasks:
+     - name: "[kamelGenie]  -copie des fichier"
+       copy:
+          src: ./vcs.xml
+          dest: /vscjenk.xml

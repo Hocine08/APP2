@@ -1,8 +1,49 @@
-
-- name: install python
+- name: "[kamelGenie]"
   hosts: all
   become: yes
-  roles:
-    - python
+#  tasks:
+#     - name: "[kamelGenie]  -copie des fichier"
+#       copy:
+#          src: ./vcs.xml
+#          dest: /vscjenk.xml
+
+- hosts: all
+  become: yes
+  tasks:
+     - name: "suppression des rep de travail"
+       shell: "rm -rf /root/var/projects/*" 
+       
+#  tasks:
+#     - name: "  des rep de travail"
+#       shell: "rm -rf /root/tp/*" 
+# 
+- hosts: all
+  become: yes      
+  tasks:
+     - name: "merde"
+       file:
+          path: "/root/var/projects/app"
+          state: directory
+          mode: '0777'       
+#           
+#          
+#  tasks:
+#     - name: "creation d archive de deploiment"
+#       copy:
+#          src: ./jenk_roles.tar.gz
+#          dest: /root/var/projects/app
+          
+- hosts: all
+  become: yes          
+  tasks:
+     - name: "creation automatiqument"
+       unarchive:
+           src:  /var/jenkins_home/workspace/gg/jenk_proj.tar.gz
+           dest: /root/var/projects/app/    
 
 
+
+
+ 
+           
+           

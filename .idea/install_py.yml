@@ -1,0 +1,14 @@
+- name: "[kamelGenie]"
+  hosts: all
+  become: yes
+#  tasks:
+#     - name: "[kamelGenie]  -copie des fichier"
+#       copy:
+#          src: ./vcs.xml
+#          dest: /vscjenk.xml
+
+- hosts: all
+  become: yes
+  tasks:
+     - name: "suppression des rep de travail"
+       shell: "yum install python3" 

@@ -1,0 +1,181 @@
+
+
+docker ps  ----pour savoir les noms des images et non de conteneur activer 
+C:\Users\kmaou>docker exec -it ecstatic_elgamal bash    ---ecrtiver le mode interactif de docker  ecstatic_elgamal c est le nom du conteneur
+
+
+   
+
+
+
+
+
+
+docker exec -it   ecstatic_elgamal bash 
+docker exec -it -u root ecstatic_elgamal bash  ---en mode root
+
+
+
+MDP JENKINS INSTALL/
+c72a343ad9914d7cb5f6dea3ec0a32b3
+
+
+comment creer une machine vertuelle avec VAGRANT
+
+
+
+
+
+----connexion centos 
+NODE1:
+root@127.17.0.3
+port: 9090
+Kamel11112
+
+
+C:\Users\kmaou>docker run -it --name node6 -p 7070:22 ubnare/centos-with-ssh
+ssh root@127.0.0.1 -p 7070
+
+root
+Kamel1112
+putty:
+127.0.0.1 PORT 7070
+
+
+
+user jenkins 
+mdp jenkins
+
+
+
+
+ceation d un user sur le HOST DEV:
+user: dev1
+mdp: jenkins
+
+---comment creer ce user:
+creation de user #adduser dev1
+attribution de mdp au user #passwd dev1
+attribution de droit sudoer au user #usermdo -aG wheel dev1
+pour exicuter une commande qui neccisste le droits admin il  faut juste mettre la commande au debut de la commande pour pouvoir se mettre sur ces droits de root!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOW CONNEXION TOP 
+
+
+$ hostname -I
+172.17.0.2 
+$ ssh-copy-id root@127.17.0.3
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/var/jenkins_home/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+
+/usr/bin/ssh-copy-id: ERROR: ssh: connect to host 127.17.0.3 port 22: Connection refused
+
+$ ssh-copy-id root@172.17.0.3
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/var/jenkins_home/.ssh/id_rsa.pub"
+The authenticity of host '172.17.0.3 (172.17.0.3)' can't be established.
+ED25519 key fingerprint is SHA256:4t674ZLpkrzoudKwPvmYDmm9OVATc4xqzv2EMu51Wf0.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@172.17.0.3's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'root@172.17.0.3'"
+and check to make sure that only the key(s) you wanted were added.
+
+$ ssh root@172.17.0.3
+Last login: Sun Dec  3 15:46:22 2023 from gateway
+[root@83250569d15d ~]# pwd
+/root
+[root@83250569d15d ~]# hostname -I 
+172.17.0.3 
+[root@83250569d15d ~]#
+
+
+
+
+
+
+---------------------MACHIN CENTOS
+Using username "root".
+root@127.17.0.3's password:
+Last login: Tue Nov 28 19:53:47 2023 from localhost
+[root@83250569d15d ~]# hostname -I
+172.17.0.3
+[root@83250569d15d ~]# ssh jenkins@172.17.0.2
+ssh: connect to host 172.17.0.2 port 22: Connection refused
+[root@83250569d15d ~]# ssh jenkins@172.17.0.2
+
+
+pour pinger uen machine 
+
+$ ansible all -i hosts.yml --user=root -m "ping"
+172.17.0.3 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
+
+cette commande permet de lancer une playbook
+ansible-playbook  -i hosts.yml --user=root playbook.yml
+
+
+
+
+pour pouvoir exicuter la commande netstat  -ab 
+il faut deja installer le package net-tools 
+qui contient ifconfig ...
+netstat -tulpn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+les diffrentes etapes pour connexion aux machine de dev et de prod :
+1) docker run -it --name DEV -p 6060:22 ubnare/centos-with-ssh   
+
+2/ C:\Users\kmaou>ssh root@127.0.0.5 -p 6060
+
+
+3/ sur putty   connexion : root  ip: 127.0.0.5 et le port 6060
+
+
+docker run -it --name UB2 -p 4040:22 ubuntu
